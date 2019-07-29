@@ -3,3 +3,5 @@
 
 ## 论文阅读及理解
 [cvpr2019][RAZ-net]Recurrent Attentive Zooming for Joint Crowd Counting and Precise Localization[[理解]](/Crowd_Counting/cvpr2019_RAZnet/cvpr2019_RAZnet.md)
+[cvpr_2019][can]Context-Aware Crowd Counting
+[ICME2019] CODA: Counting Objects via Scale-Aware Adversarial Density Adaption
