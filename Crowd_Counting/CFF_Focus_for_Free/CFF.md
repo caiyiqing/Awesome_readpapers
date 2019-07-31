@@ -67,7 +67,7 @@
 </center>
 <br>该文中的外积：是自己和自己的转置外积，再通过平均值池化生成双线性向量。先外积、然后平方根归一化、L2正则化、求平均值。
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/11.jpgg">
+  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/11.jpg">
 </center>
 
 ### 三、Focus from global density非均匀核估计
