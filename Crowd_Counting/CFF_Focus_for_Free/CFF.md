@@ -12,7 +12,7 @@
 
 ### 整体网络结构
 <center>
-    <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/1.jpg">
+    <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/1.jpg">
 </center>
 顶部分支：用于分割出点注释
 底部分支：用于估计全局密度
@@ -22,22 +22,22 @@
 重新利用注释点创建二元分割图，并利用该图通过独立的损失功能提供全面的监督。
 二进制分割图的确立方法。训练图像i中每个像素p的二进制值被确定为：
 <center>
-    <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/2.jpg">
+    <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/2.jpg">
 </center>
 如果至少一个点P在由核估计器指定的方差范围σP内，则像素p获得值1。
 
 2、焦点网络的损失
 （1）点损失：改进的交叉熵损失，实验表明当R=2时效果最好(2017ICCV)，a用来平衡重要性，
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/3.jpg">
+    <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/3.jpg">
 </center>
 在本文中引用为：
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/4.jpg">
+    <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/4.jpg">
 </center>
 前景分支的细节过程是：
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/5.jpg">
+  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/5.jpg">
 </center>
 本文以沿第一个维度的第二个像素的值表示为前景一部分的概率
 
@@ -45,34 +45,34 @@
 1、全局密度图
 <br>在全局密度中：文章使用双线性池化层来捕获全局上下文中的特征统计，已知这种特征统计特别适用于纹理和细粒度识别，对于训练图像i中的图像块，其全局密度表示为：
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/6.jpg">
+  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/6.jpg">
 </center>
 <br>Pij表示图像i的图像块j中点注释的数量，L表示全局密度步长
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/7.jpg">
+  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/7.jpg">
 </center>
 <br>Zi和Zji表示图像i和图像块j中的像素，密度步长L：表示全局图像块中最大的密度，M表示使用多少的全局密度水平。
 2、全局密度图的损失：
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/8.jpg">
+  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/8.jpg">
 </center>
 3、分支网络细节：
 <br>双线性模型，是在图像的每个位置使用外积，再池化获得图像描述符，该架构可以以平移不变的方式对局部成对特征相互作用建模，这对于细粒度分类尤其有用
 <br>引用的文章模型：
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/9.jpg">
+  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/9.jpg">
 </center>
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/10.jpg">
+  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/10.jpg">
 </center>
 <br>该文中的外积：是自己和自己的转置外积，再通过平均值池化生成双线性向量。先外积、然后平方根归一化、L2正则化、求平均值。
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/11.jpg">
+  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/11.jpgg">
 </center>
 
 ### 三、Focus from global density非均匀核估计
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/12.jpg">
+  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/12.jpg">
 </center>
 <br>其中w和h是确定点注释P-中心局部区域R的范围的超参数，并且我们将它们的值设置为我们的实验中的图像大小的八分之一。 a表示位于R中的任意点注释。| R（w，h）|是指p的数量。 d¯p表示注释点p与其k个邻近邻居之间的平均距离，β是用户定义的超参数。 通过局部估计点注释的方差，我们不再需要假设点在整个图像上均匀分布。
 
@@ -80,7 +80,7 @@
 #### 优化的解码器编码器网络
   文章采用改进的解码器-编码器架，加入了蒸馏器模块，该模块的目的是通过提取最重要的计数信息来聚合来自编码器的多级信息，解决透视失真下对象尺度的广泛变化问题。改进网络如图所示：
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/13.jpg">
+  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/13.jpg">
 </center>
 改动：
 * 将级别4之后的特征映射的通道从256/512更改为96，为了避免过拟合、 并方便融合
@@ -91,7 +91,7 @@
 
 #### 多级损失：联合L1和L2泛化损失
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/14.jpg">
+  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/14.jpg">
 </center>
 
 ### 训练细节
@@ -107,5 +107,5 @@
 
 ### 总的实验效果
 <center>
-  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/cvpr2019_RAZnet/15.jpg">
+  <img src="https://github.com/caiyiqing/Awesome_readpapers/blob/master/Crowd_Counting/CFF_Focus_for_Free/15.jpg">
 </center>
