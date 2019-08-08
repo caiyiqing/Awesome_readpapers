@@ -2,6 +2,7 @@
 阅读过群体计数相关论文
 
 ## 论文阅读及理解
+<br>[ICME2019] LOCALITY-CONSTRAINED SPATIAL TRANSFORMER NETWORK FOR VIDEO CROWD COUNTING
 <br>[IROS2019] Geometric and Physical Constraints for Drone-Based Head Plane Crowd Density Estimation
 <br>[CVPR2019] Video Crowd Counting via Dynamic Temporal Modeling
 <br>[ICCV2019] Counting with Focus for Free[[理解]](/Crowd_Counting/CFF_Focus_for_Free/CFF.md)
