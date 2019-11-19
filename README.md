@@ -4,3 +4,4 @@
 ## 轻量网络(Efficient neural networks)[[论文列表]](/Efficient%20neural%20networks/Effcient.md)
 ## 光流法(Optical flow)[论文列表]
 ## 语义分割(Semantic Segmentation)[[论文列表]](/Semantic%20Segmentation/Semantic%20Segmentation.md)
+## [文献周报](/zhoubao/zhoubao.md)
